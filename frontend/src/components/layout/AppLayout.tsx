@@ -14,7 +14,8 @@ import {
   Menu,
   X,
   Mic,
-  Home
+  Home,
+  Clock,
 } from "lucide-react";
 
 interface AppLayoutProps {
@@ -44,6 +45,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: Home },
     { name: "Chat", href: "/chat", icon: MessageSquare },
+    { name: "History", href: "/chat/history", icon: Clock },
     { name: "Journal", href: "/journal", icon: Book },
     { name: "Search", href: "/search", icon: Search },
     { name: "Memories", href: "/memories", icon: BrainCircuit },
@@ -88,7 +90,11 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
         <nav className="flex-1 space-y-1 px-4 py-6 overflow-y-auto">
           {navItems.map((item) => {
-            const isActive = pathname.startsWith(item.href);
+            // Chat: active only on /chat or /chat?... (not /chat/history)
+            const isActive =
+              item.href === "/chat"
+                ? pathname === "/chat" || pathname.startsWith("/chat?")
+                : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.name}
