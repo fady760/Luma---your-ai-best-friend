@@ -201,7 +201,10 @@ export default function ChatPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const [mode, setMode] = useState<Mode>((searchParams.get("mode") as Mode) || "talk_reflect");
+  const rawMode = searchParams.get("mode") as Mode;
+  const [mode, setMode] = useState<Mode>(
+    rawMode && rawMode in MODES ? rawMode : "talk_reflect"
+  );
   const [conversation, setConversation] = useState<Conversation | null>(null);
   const [input, setInput] = useState("");
   const [isSending, setIsSending] = useState(false);

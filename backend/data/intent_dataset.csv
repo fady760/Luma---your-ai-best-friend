@@ -1,0 +1,131 @@
+text,intent
+I'm feeling really anxious today,emotional_support
+I've been so overwhelmed lately,emotional_support
+I just need someone to talk to,emotional_support
+I feel so alone right now,emotional_support
+I've been crying and I don't know why,emotional_support
+I'm struggling with my emotions,emotional_support
+I feel empty inside,emotional_support
+I'm sad and I don't know what to do,emotional_support
+I feel like nobody understands me,emotional_support
+I'm going through a really tough time,emotional_support
+I feel like I'm not good enough,emotional_support
+I'm really stressed and burnt out,emotional_support
+My heart feels heavy today,emotional_support
+I'm scared about what the future holds,emotional_support
+I don't feel like myself lately,emotional_support
+I feel really lost right now,emotional_support
+I've been feeling down for weeks,emotional_support
+I'm feeling overwhelmed with life,emotional_support
+I'm not okay and I need to talk,emotional_support
+Everything feels too much right now,emotional_support
+I keep overthinking everything,emotional_support
+I feel like I'm failing at everything,emotional_support
+I'm frustrated and I don't know how to cope,emotional_support
+I feel invisible to the people around me,emotional_support
+I'm going through a breakup and it hurts,emotional_support
+I miss someone who is no longer in my life,emotional_support
+I feel guilty about something I did,emotional_support
+I'm worried about my mental health,emotional_support
+I feel like giving up,emotional_support
+I need someone to listen without judging,emotional_support
+Can you help me figure out what to do,asking_for_advice
+I need some advice on this situation,asking_for_advice
+What should I do about this problem,asking_for_advice
+I don't know how to handle this,asking_for_advice
+Can you give me some guidance,asking_for_advice
+What would you suggest I do here,asking_for_advice
+I need your opinion on something,asking_for_advice
+How do I deal with a difficult coworker,asking_for_advice
+What's the best way to approach this,asking_for_advice
+I'm not sure which option to choose,asking_for_advice
+Help me decide what to do,asking_for_advice
+I'm having trouble making a decision,asking_for_advice
+Should I stay or should I leave,asking_for_advice
+What do you think I should prioritize,asking_for_advice
+I need advice about my relationship,asking_for_advice
+How do I talk to my boss about a raise,asking_for_advice
+I need help navigating a conflict with a friend,asking_for_advice
+What steps should I take to improve this situation,asking_for_advice
+Can you recommend the best approach,asking_for_advice
+How do I handle this professionally,asking_for_advice
+I'm trying to achieve my goal of getting fit,goal_planning
+I want to learn a new skill this year,goal_planning
+Help me create a plan to reach my goal,goal_planning
+I want to start saving money but I don't know how,goal_planning
+I want to build better habits,goal_planning
+My goal is to get promoted at work,goal_planning
+I want to finish my degree and need a roadmap,goal_planning
+Help me break my goal into steps,goal_planning
+I want to run a marathon in six months,goal_planning
+I'm trying to start my own business,goal_planning
+I want to improve my productivity,goal_planning
+I need to set realistic milestones,goal_planning
+I want to read more books this year,goal_planning
+I'm trying to get healthier and need a plan,goal_planning
+I want to learn to code and build an app,goal_planning
+Help me organize my goals for the year,goal_planning
+I want to travel to three countries next year,goal_planning
+I want to meditate daily and need a routine,goal_planning
+My goal is to write a novel,goal_planning
+I want to improve my financial situation,goal_planning
+I've been thinking about my childhood lately,journaling
+I want to write about something that happened today,journaling
+Let me record my thoughts before I forget,journaling
+I'm reflecting on my week,journaling
+I had an interesting experience I want to document,journaling
+I want to process my feelings through writing,journaling
+Today was significant and I want to remember it,journaling
+Let me think through what happened earlier,journaling
+I want to capture this memory,journaling
+I've been thinking a lot and want to write it out,journaling
+I want to reflect on how I've grown this month,journaling
+Something happened today that really affected me,journaling
+I want to document my progress,journaling
+I need to put my thoughts into words,journaling
+I'm journaling about a major life event,journaling
+I want to write a personal reflection,journaling
+Let me think about what I'm grateful for today,journaling
+I want to explore why I feel a certain way,journaling
+I want to record my experience and look back on it,journaling
+Writing helps me process things,journaling
+Hey how are you,general_conversation
+What can you help me with,general_conversation
+Tell me something interesting,general_conversation
+Let's just chat for a bit,general_conversation
+I'm bored and want to talk,general_conversation
+Can we have a normal conversation,general_conversation
+What do you think about life,general_conversation
+I just want to talk to someone,general_conversation
+What's new with you,general_conversation
+Can you tell me a joke,general_conversation
+I like talking to you,general_conversation
+What are you capable of,general_conversation
+How does this work,general_conversation
+Let's have a casual conversation,general_conversation
+I'm just passing time and wanted to chat,general_conversation
+Do you enjoy our conversations,general_conversation
+Can we talk about random things,general_conversation
+I find our chats really helpful,general_conversation
+I enjoy talking to you,general_conversation
+Just wanted to say hi,general_conversation
+I can't figure out why this keeps happening,asking_for_advice
+I keep making the same mistakes,asking_for_advice
+I don't understand this situation at all,asking_for_advice
+I'm confused about what happened,asking_for_advice
+My relationship feels stuck,emotional_support
+I'm exhausted from trying so hard,emotional_support
+Nobody appreciates what I do,emotional_support
+I feel like I'm just surviving not living,emotional_support
+I want to get my life together,goal_planning
+I need structure in my daily routine,goal_planning
+I want to be more disciplined,goal_planning
+Help me create a morning routine,goal_planning
+I want to write about a difficult conversation I had,journaling
+I'm reflecting on a decision I made,journaling
+I want to track my emotional progress,journaling
+Today I accomplished something and want to remember,journaling
+What time is it,general_conversation
+Tell me about yourself,general_conversation
+Can you explain how you work,general_conversation
+Are you real,general_conversation

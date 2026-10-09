@@ -12,6 +12,9 @@ from app.config import settings
 from app.database import init_db
 from app.auth.router import router as auth_router
 from app.conversations.router import router as conversations_router
+from app.journal.router import router as journal_router
+from app.memories.router import router as memories_router
+from app.nlp.router import router as nlp_router
 
 
 @asynccontextmanager
@@ -44,6 +47,9 @@ app.add_middleware(
 # Register routers
 app.include_router(auth_router)
 app.include_router(conversations_router)
+app.include_router(journal_router)
+app.include_router(memories_router)
+app.include_router(nlp_router)
 
 
 @app.get("/api/health")

@@ -233,11 +233,21 @@ async def send_message(
     if not content:
         raise HTTPException(400, "Message content cannot be empty")
 
+    # Classify the user's intent (non-blocking — falls back gracefully)
+    intent_result = {"intent": None, "confidence": None}
+    try:
+        from app.nlp.intent_classifier import classify_intent
+        intent_result = classify_intent(content)
+    except Exception:
+        pass
+
     # Save user message
     user_msg = Message(
         conversation_id=conversation_id,
         role="user",
         content=content,
+        predicted_intent=intent_result.get("intent"),
+        intent_confidence=intent_result.get("confidence"),
     )
     session.add(user_msg)
     session.commit()

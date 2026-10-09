@@ -79,7 +79,7 @@ export default function DashboardPage() {
         </Link>
 
         <Link
-          href="/chat?mode=voice"
+          href="/chat"
           className="glass-card p-6 flex flex-col items-center justify-center gap-4 h-44 group cursor-pointer border-[rgba(168,85,247,0.15)]"
         >
           <div className="relative h-14 w-14 rounded-full bg-gradient-to-br from-[rgba(124,58,237,0.4)] to-[rgba(168,85,247,0.15)] flex items-center justify-center text-[#c084fc] shadow-[0_0_28px_rgba(168,85,247,0.25)]">
