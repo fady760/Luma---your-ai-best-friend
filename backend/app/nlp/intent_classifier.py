@@ -100,7 +100,6 @@ def _train_and_save() -> bool:
             max_iter=1000,
             C=5.0,
             solver="lbfgs",
-            multi_class="auto",
         )
 
         X = _vectorizer.fit_transform(texts)
@@ -201,7 +200,7 @@ def evaluate_classifier() -> Optional[dict]:
         )
 
         vec = TfidfVectorizer(ngram_range=(1, 2), max_features=5000, sublinear_tf=True)
-        clf = LogisticRegression(max_iter=1000, C=5.0)
+        clf = LogisticRegression(max_iter=1000, C=5.0, solver="lbfgs")
 
         X_tr = vec.fit_transform(X_train)
         X_te = vec.transform(X_test)

@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     # Ollama
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     OLLAMA_MODEL: str = "phi3.5"
+    OLLAMA_EXECUTABLE: str = r"C:\Users\fadis\AppData\Local\Programs\Ollama\ollama.exe"
 
     # CORS
     FRONTEND_URL: str = "http://localhost:3000"
