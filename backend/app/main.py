@@ -15,6 +15,7 @@ from app.conversations.router import router as conversations_router
 from app.journal.router import router as journal_router
 from app.memories.router import router as memories_router
 from app.nlp.router import router as nlp_router
+from app.voice.router import router as voice_router
 
 
 @asynccontextmanager
@@ -50,6 +51,7 @@ app.include_router(conversations_router)
 app.include_router(journal_router)
 app.include_router(memories_router)
 app.include_router(nlp_router)
+app.include_router(voice_router)
 
 
 @app.get("/api/health")

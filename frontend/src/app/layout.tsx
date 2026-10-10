@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+export const instant = false;
 import { Inter } from "next/font/google";
 import { AuthProvider } from "@/lib/auth-context";
 import "./globals.css";

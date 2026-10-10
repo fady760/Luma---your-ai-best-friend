@@ -198,7 +198,7 @@ class LumaApiClient {
 
   async semanticSearch(query: string, limit = 10) {
     return this.request<any[]>(
-      `/api/search?query=${encodeURIComponent(query)}&limit=${limit}`
+      `/api/memories/search?query=${encodeURIComponent(query)}&limit=${limit}`
     );
   }
 
@@ -226,6 +226,44 @@ class LumaApiClient {
     return this.request<void>(`/api/memories/${id}`, {
       method: "DELETE",
     });
+  }
+
+  // ─── Voice Endpoints (Phase 4) ───────────────────────────────
+
+  async getVoiceStatus() {
+    return this.request<any>("/api/voice/status");
+  }
+
+  async transcribeAudio(audioBlob: Blob) {
+    const formData = new FormData();
+    formData.append("audio", audioBlob, "audio.webm");
+
+    // We can't use this.request directly because it sets Content-Type to application/json by default
+    // and fetch needs to set the multipart/form-data boundary automatically.
+    const token = this.getToken();
+    const headers: Record<string, string> = {};
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    const response = await fetch(`${API_BASE_URL}/api/voice/transcribe`, {
+      method: "POST",
+      headers,
+      body: formData,
+    });
+
+    if (!response.ok) {
+      let errorMessage = `Transcription failed with status ${response.status}`;
+      try {
+        const errorData = await response.json();
+        errorMessage = errorData.detail || errorData.error || errorMessage;
+      } catch {
+        // Response body was not JSON
+      }
+      throw new Error(errorMessage);
+    }
+
+    return response.json();
   }
 
   // ─── Health Check ─────────────────────────────────────────────

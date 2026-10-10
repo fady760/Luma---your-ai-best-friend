@@ -7,7 +7,7 @@ listing history, and deleting conversations.
 
 from datetime import datetime, timezone
 from typing import Optional
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, BackgroundTasks
 from sqlmodel import Session, select
 from pydantic import BaseModel
 
@@ -215,6 +215,7 @@ def delete_conversation(
 async def send_message(
     conversation_id: int,
     data: MessageCreate,
+    background_tasks: BackgroundTasks,
     current_user: User = Depends(get_current_user),
     session: Session = Depends(get_session),
 ):
@@ -282,6 +283,10 @@ async def send_message(
     session.add(conv)
     session.commit()
     session.refresh(ai_msg)
+
+    # Automatically extract memories from the user message in the background
+    from app.nlp.memory_extractor import extract_memories_background_task
+    background_tasks.add_task(extract_memories_background_task, current_user.id, content)
 
     return [
         _msg_response(user_msg),
